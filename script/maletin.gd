@@ -1,21 +1,11 @@
 extends Area2D
+class_name Maletin
 
+@export var nueva_animacion : SpriteFrames = preload("res://Frames/Skin2.2.tres")
 
 func _ready():
-	self.body_entered.connect(_on_body_entered)
-	self.body_exited.connect(_on_body_exited)
+	add_to_group("Items")  # O el grupo que uses para detectar objetos interactuables
 
-var player_cercano = null
-
-func _on_body_entered(body):
-	if body.is_in_group("Player"):
-		player_cercano = body
-
-func _on_body_exited(body):
-	if body == player_cercano:
-		player_cercano = null
-
-func activar_skin_de_ataque():
-	if player_cercano != null:
-		player_cercano.cambiar_a_skin_ataque()
-		queue_free()  # Se destruye el maletín tras activarse
+func recoger():
+	print("Maletín recogido!")
+	queue_free()  # Elimina el maletín del juego, o haz lo que quieras cuando se recoja

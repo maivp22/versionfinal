@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bxitl5140daxf"]
 
-[ext_resource type="Script" uid="uid://n25ok5d6atv1" path="res://Script/maletin.gd" id="1_mw3ne"]
+[ext_resource type="Script" uid="uid://n25ok5d6atv1" path="res://script/maletin.gd" id="1_mw3ne"]
 [ext_resource type="Texture2D" uid="uid://dpu8hb028jdxm" path="res://data/#1 - Transparent Icons.png" id="2_6t6i7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bea0c"]

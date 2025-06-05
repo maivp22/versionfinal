@@ -7,7 +7,7 @@ extends Node2D
 func _ready() -> void:
 	if NavigationManage.spawn_door_tag != null:
 		_on_level_spawn(NavigationManage.spawn_door_tag)		
-		var player_scene = preload("res://Scenes/Player.tscn")  # Carga la escena Player
+		var player_scene = preload("res://Scenes/playerL2.tscn")  # Carga la escena Player
 		var player_instance = player_scene.instantiate()        # Instancia la escena
 		add_child(player_instance)                              # La agregas como hijo del nodo actual
 

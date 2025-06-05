@@ -3239,7 +3239,7 @@ Nombre_Door_destino = "OL0"
 spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="TilemapLayers/Doors/Door_EL2" index="0"]
-position = Vector2(151, -156)
+position = Vector2(-1, -2)
 
 [node name="Spawn" parent="TilemapLayers/Doors/Door_EL2" index="1"]
 position = Vector2(82, 0)
@@ -3580,7 +3580,7 @@ position = Vector2(1268, 1)
 position = Vector2(1147, 1)
 
 [node name="vela5" parent="velas" instance=ExtResource("24_5yjps")]
-position = Vector2(-61, 117)
+position = Vector2(-59, 118)
 
 [node name="vela84" parent="velas" instance=ExtResource("21_h5u8r")]
 position = Vector2(1689, 157)
@@ -3715,6 +3715,7 @@ position = Vector2(808, 58)
 position = Vector2(867, 682)
 
 [node name="Maletin" parent="." instance=ExtResource("28_v83kb")]
+visible = false
 position = Vector2(77, 8)
 
 [editable path="TilemapLayers/Doors/Door_EL2"]
