@@ -6,11 +6,11 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4.4.1
+config_version=5
 
-[.1[application]config]
+[.1[application]
 
-name="RootsOfRebirthMai"
+"config]name"="RootsOfRebirthMai"
 
 [application]
 
