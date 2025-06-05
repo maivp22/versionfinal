@@ -8,13 +8,12 @@
 
 config_version=5
 
-[.1[application]
+[.1[application]config]
 
-"config]name"="RootsOfRebirthMai"
+name="RootsOfRebirthMai"
 
 [application]
 
-run/main_scene="uid://brnlr25ni7hin"
 config/features=PackedStringArray("4.4")
 
 [autoload]
@@ -25,6 +24,7 @@ BrilloOverlay="*res://Scenes/BrilloOverlay.tscn"
 Soundmanager="*res://script/soundmanager.gd"
 Global="*res://script/Global.gd"
 NavigationManage="*res://script/navigation_manage.gd"
+HelpUiLoader="*res://script/HelpUILoader.gd"
 
 [config]
 

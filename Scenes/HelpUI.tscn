@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7t7n5kygtr7r"]
+
+[ext_resource type="Script" uid="uid://d31qwc4edghdj" path="res://Scenes/help_ui.gd" id="1_bldds"]
+
+[node name="HelpButton" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+offset = Vector2(1050, 20)
+transform = Transform2D(1, 0, 0, 1, 1050, 20)
+script = ExtResource("1_bldds")
+
+[node name="HelpPopup" type="PopupPanel" parent="."]
+process_mode = 3
+size = Vector2i(708, 590)
+visible = true
+
+[node name="Label" type="Label" parent="HelpPopup"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 704.0
+offset_bottom = 586.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 13
+text = "Mundo 1:
+Interactuar npc = E
+Arriba/abajo/izquierda/derecha = flechas/ WASD
+Inventario = I
+Pausar música = P
+Pausar juego = Esc
+Manejar inventario = Tab
+
+Mundo 2 y mundo 3:
+Atacar = X/Q
+Interaccionar = E
+Arriba/abajo/izquierda/derecha = flechas/ WASD
+Pausar música = P
+Pausar juego = Esc"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="HelpPopup"]
+process_mode = 3
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 704.0
+offset_bottom = 586.0
+size_flags_horizontal = 4
+flat = true
+
+[node name="HelpButton" type="Button" parent="."]
+process_mode = 3
+offset_left = -1038.0
+offset_top = 200.0
+offset_right = -998.0
+offset_bottom = 240.0
+text = "?"
+
+[connection signal="popup_hide" from="HelpPopup" to="." method="_on_help_popup_popup_hide"]
+[connection signal="pressed" from="HelpPopup/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]

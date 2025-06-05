@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://uyrlaadraaca"]
+
+[ext_resource type="Script" path="res://Scenes/ganaste.gd" id="1_8spsg"]
+[ext_resource type="Texture2D" uid="uid://be1dfjvgqck1w" path="res://ui/ganaste.jpeg" id="2_tpnci"]
+
+[node name="Ganaste" type="CanvasLayer"]
+script = ExtResource("1_8spsg")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -72.0
+offset_right = 61.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tpnci")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 280.0
+offset_top = 514.0
+offset_right = -286.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
