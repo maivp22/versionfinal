@@ -1,5 +1,7 @@
 extends Node
 
+const scene_level4 = preload("res://Scenes/boss_final.tscn")
+const scene_level3 = preload("res://Scenes/mundo_3.tscn")
 const scene_level2 = preload("res://Scenes/Mundo2.tscn")
 const scene_level1 = preload("res://Scenes/Mundo.tscn")
 
@@ -10,10 +12,13 @@ var spawn_door_tag
 func go_to_level (level_tag, destination_door):
 	var scene_to_load	
 	match level_tag:
-		"lobby":
+		"level1":
 			scene_to_load = scene_level1
-		"level":
+		"level2":
 			scene_to_load = scene_level2
+		"level3":
+			scene_to_load = scene_level3
+		"Boss"
 			
 	if scene_to_load != null:
 		spawn_door_tag = destination_door
