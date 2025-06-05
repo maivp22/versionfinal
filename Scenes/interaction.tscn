@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyx4trv37m4jm"]
+
+[ext_resource type="Script" uid="uid://baadioyycu1iy" path="res://script/interaction.gd" id="1_5sh1j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q35ui"]
+size = Vector2(45, 55)
+
+[node name="Interaction" type="Area2D"]
+script = ExtResource("1_5sh1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(22, 23)
+shape = SubResource("RectangleShape2D_q35ui")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+offset_left = 20.0
+offset_top = -36.0
+offset_right = 26.0
+offset_bottom = -13.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "!"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

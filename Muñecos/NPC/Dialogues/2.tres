@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=5 format=3 uid="uid://c6e1wsgopyulu"]
+
+[ext_resource type="Script" uid="uid://bmv5hwj8fbbkl" path="res://script/Dialogue.gd" id="1_288xy"]
+[ext_resource type="Resource" uid="uid://bou7rvw5gbc0h" path="res://Muñecos/NPC/Dialogues/Ok.tres" id="2_77lpa"]
+[ext_resource type="Texture2D" uid="uid://dqwyrn13jla1d" path="res://Muñecos/vendor-idle.png" id="2_t8dpk"]
+[ext_resource type="Resource" uid="uid://tbaj8jhf222" path="res://Muñecos/NPC/Quests/0.tres" id="2_w3krk"]
+
+[resource]
+script = ExtResource("1_288xy")
+texture = ExtResource("2_t8dpk")
+name = "Vendedor"
+dialogue = "Para poder darte lo que necesitas, debes recolectar 30 objetos reciclables"
+path_option = "Qué debo hacer?"
+options = Array[ExtResource("1_288xy")]([ExtResource("2_77lpa")])
+quest = ExtResource("2_w3krk")
+metadata/_custom_type_script = "uid://bmv5hwj8fbbkl"

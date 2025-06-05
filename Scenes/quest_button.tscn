@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://sxq6mo83udlr"]
+
+[ext_resource type="Script" uid="uid://dhtxt5tludr1h" path="res://script/quest_button.gd" id="1_2285v"]
+
+[node name="QuestButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 30
+script = ExtResource("1_2285v")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

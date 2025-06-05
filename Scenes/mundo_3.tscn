@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://dd7olgf5w3jjc"]
+[gd_scene load_steps=75 format=4 uid="uid://dd7olgf5w3jjc"]
 
 [ext_resource type="Texture2D" uid="uid://b375hwvungnm5" path="res://Tileset/mundo3/animated lava river with light fx spritesheet.png" id="1_m3qg4"]
 [ext_resource type="Texture2D" uid="uid://cympc8jbsn6sr" path="res://Tileset/mundo3/lavafall-spritesheet-16frames.png" id="2_bpa6w"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://cipjn745b0c5" path="res://Tileset/mundo3/rock-formations on lava-_1.png" id="43_e4lq1"]
 [ext_resource type="PackedScene" uid="uid://dvyag7rvlmij0" path="res://Scenes/Puerta.tscn" id="44_8q0mh"]
 [ext_resource type="Texture2D" uid="uid://cpie2ea6niphr" path="res://Tileset/mundo3/rock-formations on lava-_4.png" id="44_x0tcn"]
+[ext_resource type="PackedScene" uid="uid://b7t7n5kygtr7r" path="res://Scenes/HelpUI.tscn" id="45_4adkc"]
 [ext_resource type="Texture2D" uid="uid://d21xxkh34wnog" path="res://Tileset/mundo3/rock-formations on lava-_3.png" id="45_vibye"]
 [ext_resource type="PackedScene" uid="uid://rkxee45vh2xi" path="res://Scenes/enemy_four.tscn" id="48_31vme"]
 [ext_resource type="PackedScene" uid="uid://chu7lbhuxpdt" path="res://Scenes/Enemy_L3_2.tscn" id="49_6rka2"]
@@ -10991,20 +10992,19 @@ position = Vector2(468, -829)
 
 [node name="Door_EL3" parent="Puertas" instance=ExtResource("44_8q0mh")]
 position = Vector2(-1409, 913)
-Nombre_Nivel_destino = "level2"
-Nombre_Door_destino = "OL2"
-spawn_direction = "down"
+script = null
 
 [node name="Spawn" parent="Puertas/Door_EL3" index="1"]
 position = Vector2(1, -72)
 
 [node name="Door_OL3" parent="Puertas" instance=ExtResource("44_8q0mh")]
 position = Vector2(432, -1895)
-Nombre_Nivel_destino = "Boss"
-Nombre_Door_destino = "EL4"
+script = null
 
 [node name="Spawn" parent="Puertas/Door_OL3" index="1"]
 position = Vector2(0, 69)
+
+[node name="HelpButton" parent="." instance=ExtResource("45_4adkc")]
 
 [editable path="Puertas/Door_EL3"]
 [editable path="Puertas/Door_OL3"]

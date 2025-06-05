@@ -8,12 +8,13 @@
 
 config_version=5
 
-[.1[application]config]
+[.1[application]
 
-name="RootsOfRebirthMai"
+"config]name"="RootsOfRebirthMai"
 
 [application]
 
+run/main_scene="uid://brnlr25ni7hin"
 config/features=PackedStringArray("4.4")
 
 [autoload]
@@ -25,6 +26,8 @@ Soundmanager="*res://script/soundmanager.gd"
 Global="*res://script/Global.gd"
 NavigationManage="*res://script/navigation_manage.gd"
 HelpUiLoader="*res://script/HelpUILoader.gd"
+QuestManager="*res://script/quest_manager.gd"
+DialogueManager="*res://script/dialogue_manager.gd"
 
 [config]
 

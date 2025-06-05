@@ -23,18 +23,18 @@ func _ready():
 	current_life = max_life
 	health_bar.max_value = max_life
 	health_bar.value = current_life
-	player = get_tree().get_first_node_in_group("Player")
+	player = get_tree().get_first_node_in_group("player")
 
 func _physics_process(delta):
 	if player == null or not player.is_inside_tree():
-		player = get_tree().get_first_node_in_group("Player")
+		player = get_tree().get_first_node_in_group("player")
 		return
 
 	attack_timer -= delta
 
 	var distance = global_position.distance_to(player.global_position)
 
-	if distance <= attack_range:
+	if distance < attack_range:
 		velocity = Vector2.ZERO
 		update_attack_animation(last_direction)
 		move_and_slide()

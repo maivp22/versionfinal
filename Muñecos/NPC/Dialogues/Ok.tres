@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=2 format=3 uid="uid://bou7rvw5gbc0h"]
+
+[ext_resource type="Script" uid="uid://bmv5hwj8fbbkl" path="res://script/Dialogue.gd" id="1_02kvc"]
+
+[resource]
+script = ExtResource("1_02kvc")
+name = "Vendedor"
+dialogue = ""
+path_option = "Ok"
+options = Array[ExtResource("1_02kvc")]([])
+metadata/_custom_type_script = "uid://bmv5hwj8fbbkl"

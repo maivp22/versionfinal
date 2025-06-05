@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=4 format=3 uid="uid://bp2lj6wt1vcah"]
+
+[ext_resource type="Script" uid="uid://bmv5hwj8fbbkl" path="res://script/Dialogue.gd" id="1_b3y73"]
+[ext_resource type="Texture2D" uid="uid://dqwyrn13jla1d" path="res://Muñecos/vendor-idle.png" id="2_5tv1q"]
+[ext_resource type="Resource" uid="uid://b3oe5oqd36upf" path="res://Muñecos/NPC/Dialogues/1.tres" id="2_qq6yo"]
+
+[resource]
+script = ExtResource("1_b3y73")
+texture = ExtResource("2_5tv1q")
+name = "Vendedor"
+dialogue = "Hola viajero!"
+path_option = ""
+options = Array[ExtResource("1_b3y73")]([ExtResource("2_qq6yo")])
+metadata/_custom_type_script = "uid://bmv5hwj8fbbkl"

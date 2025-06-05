@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://tbaj8jhf222"]
+
+[ext_resource type="Script" uid="uid://c3qa0f5khttlf" path="res://script/Quest.gd" id="1_t2qwn"]
+
+[resource]
+script = ExtResource("1_t2qwn")
+title = "Recolectar "
+description = "Recolectar basura"
+objective = "Fetch"
+object = ""
+status = ""
+metadata/_custom_type_script = "uid://c3qa0f5khttlf"
