@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ipisyluxeygj"]
+
+[ext_resource type="PackedScene" uid="uid://cuw320j6i8hvm" path="res://Scenes/collectable.tscn" id="1_tvnlx"]
+[ext_resource type="Texture2D" uid="uid://ctj67bgiupqy7" path="res://items/chips.png" id="2_5c522"]
+[ext_resource type="Resource" uid="uid://dktwpibwqfwe7" path="res://inventory/chips.tres" id="2_x0klo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0klo"]
+resource_local_to_scene = true
+size = Vector2(23.5, 10)
+
+[node name="chips" instance=ExtResource("1_tvnlx")]
+itemRes = ExtResource("2_x0klo")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_x0klo")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_5c522")

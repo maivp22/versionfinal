@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0v6o1p3hlnks"]
+
+[ext_resource type="PackedScene" uid="uid://cuw320j6i8hvm" path="res://Scenes/collectable.tscn" id="1_bkbm4"]
+[ext_resource type="Resource" uid="uid://poi45c3g7am" path="res://inventory/guineo.tres" id="2_0exhq"]
+[ext_resource type="Texture2D" uid="uid://cogxgp44g3f0c" path="res://items/guineo.png" id="2_s2ebl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0exhq"]
+resource_local_to_scene = true
+size = Vector2(23, 23)
+
+[node name="banana" instance=ExtResource("1_bkbm4")]
+itemRes = ExtResource("2_0exhq")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_0exhq")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_s2ebl")

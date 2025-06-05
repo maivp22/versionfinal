@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx6xwawvuhr2q"]
+
+[ext_resource type="PackedScene" uid="uid://cuw320j6i8hvm" path="res://Scenes/collectable.tscn" id="1_65ng1"]
+[ext_resource type="Resource" uid="uid://beg7cmetbcuif" path="res://inventory/pila.tres" id="2_2fj5j"]
+[ext_resource type="Texture2D" uid="uid://b3vkuujb3mph" path="res://items/Pila.png" id="2_v28md"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fj5j"]
+resource_local_to_scene = true
+size = Vector2(23, 8)
+
+[node name="pila" instance=ExtResource("1_65ng1")]
+itemRes = ExtResource("2_2fj5j")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_2fj5j")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_v28md")

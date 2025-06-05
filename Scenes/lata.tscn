@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8sgqt3bd708r"]
+
+[ext_resource type="PackedScene" uid="uid://cuw320j6i8hvm" path="res://Scenes/collectable.tscn" id="1_33urf"]
+[ext_resource type="Resource" uid="uid://dhhn7ukiav4n" path="res://inventory/bolsa.tres" id="2_r7ici"]
+[ext_resource type="Texture2D" uid="uid://431qunlplhk2" path="res://items/bolsa.png" id="3_l3ego"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3ego"]
+resource_local_to_scene = true
+size = Vector2(23, 23)
+
+[node name="lata" instance=ExtResource("1_33urf")]
+itemRes = ExtResource("2_r7ici")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_l3ego")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("3_l3ego")

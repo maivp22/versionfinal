@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfuopiynmc83u"]
+
+[ext_resource type="PackedScene" uid="uid://cuw320j6i8hvm" path="res://Scenes/collectable.tscn" id="1_ijk52"]
+[ext_resource type="Texture2D" uid="uid://bojk8irhapf4d" path="res://items/vino.png" id="2_2uo8w"]
+[ext_resource type="Resource" uid="uid://cvxcx8wviquj2" path="res://inventory/vino.tres" id="2_vf1qr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf1qr"]
+resource_local_to_scene = true
+size = Vector2(8, 22)
+
+[node name="vino" instance=ExtResource("1_ijk52")]
+itemRes = ExtResource("2_vf1qr")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_vf1qr")
+
+[node name="Sprite2D" parent="." index="1"]
+texture_filter = 1
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_2uo8w")

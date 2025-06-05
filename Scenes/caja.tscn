@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://q3tm1a7qm6n"]
+
+[ext_resource type="PackedScene" uid="uid://cuw320j6i8hvm" path="res://Scenes/collectable.tscn" id="1_kois6"]
+[ext_resource type="Texture2D" uid="uid://bfx718qtaicjo" path="res://items/Caja.png" id="2_c8nnm"]
+[ext_resource type="Resource" uid="uid://c3h7m3slyn8bb" path="res://inventory/caja.tres" id="2_scb3r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scb3r"]
+resource_local_to_scene = true
+size = Vector2(23, 23)
+
+[node name="caja" instance=ExtResource("1_kois6")]
+itemRes = ExtResource("2_scb3r")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_scb3r")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_c8nnm")
