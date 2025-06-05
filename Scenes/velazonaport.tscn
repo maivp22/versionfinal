@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cp0jlo20pg8on"]
+
+[ext_resource type="Script" uid="uid://ct0unbupi47v2" path="res://Script/vela.gd" id="1_0swyy"]
+[ext_resource type="Texture2D" uid="uid://bt1uhep5131gf" path="res://sprites/candleA_01.png" id="2_72ysq"]
+[ext_resource type="Texture2D" uid="uid://gkn27fa4omra" path="res://sprites/candleA_04.png" id="3_hh7w7"]
+[ext_resource type="Texture2D" uid="uid://dhjp68yb6p5vx" path="res://sprites/rectangulo.png" id="4_yuruj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inol3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_72ysq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hh7w7")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0swyy"]
+size = Vector2(4, 11)
+
+[node name="vela" type="Node2D"]
+script = ExtResource("1_0swyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_inol3")
+animation = &"1"
+frame_progress = 0.24453
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(239, 94)
+scale = Vector2(1.30804, 2.22784)
+color = Color(1, 1, 0.568627, 1)
+range_z_min = 0
+range_z_max = 25
+texture = ExtResource("4_yuruj")
+texture_scale = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_0swyy")

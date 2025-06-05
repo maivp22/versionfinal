@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1ut4r0eoctyc"]
+
+[ext_resource type="Script" uid="uid://ct0unbupi47v2" path="res://Script/vela.gd" id="1_ntthn"]
+[ext_resource type="Texture2D" uid="uid://bt1uhep5131gf" path="res://candleA_01.png" id="2_n52og"]
+[ext_resource type="Texture2D" uid="uid://gkn27fa4omra" path="res://candleA_04.png" id="3_8xuw0"]
+[ext_resource type="Texture2D" uid="uid://dhjp68yb6p5vx" path="res://rectangulo.png" id="4_exhlp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inol3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n52og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8xuw0")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[node name="vela" type="Node2D"]
+script = ExtResource("1_ntthn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_inol3")
+animation = &"1"
+frame_progress = 0.24453
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(570, -478)
+scale = Vector2(4.17751, 4.59229)
+color = Color(1, 1, 0.568627, 1)
+range_z_min = 0
+range_z_max = 25
+texture = ExtResource("4_exhlp")
+texture_scale = 0.4

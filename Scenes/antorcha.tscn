@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dd6o4uctse0gf"]
+
+[ext_resource type="Script" uid="uid://ech8f4ktpxn3" path="res://script/antorcha.gd" id="1_5sr84"]
+[ext_resource type="Texture2D" uid="uid://bfpln5ni1bqmd" path="res://sprites/torch_1.png" id="1_e7bbs"]
+[ext_resource type="Texture2D" uid="uid://cbthpw3b6idff" path="res://sprites/torch_4.png" id="4_8jye5"]
+[ext_resource type="Texture2D" uid="uid://dux8n1m6uysdo" path="res://sprites/circulo.png" id="4_wxyjw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5sr84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e7bbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8jye5")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[node name="antorcha" type="Node2D"]
+position = Vector2(0, 1)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("1_5sr84")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.46794e-07, 0)
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_5sr84")
+animation = &"1"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-0.8, -0.999999)
+color = Color(1, 1, 0.568627, 1)
+energy = 0.6
+range_z_min = -100
+range_z_max = 100
+texture = ExtResource("4_wxyjw")
+texture_scale = 0.9

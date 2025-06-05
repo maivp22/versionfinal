@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvyag7rvlmij0"]
+
+[ext_resource type="Script" uid="uid://bniffupn1ul2t" path="res://Scene/puerta.gd" id="1_dsm86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aft6o"]
+size = Vector2(88.5, 75)
+
+[node name="Puerta" type="Area2D"]
+script = ExtResource("1_dsm86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_aft6o")
+one_way_collision_margin = 0.0
+
+[node name="Spawn" type="Marker2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

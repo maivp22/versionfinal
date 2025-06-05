@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://2yn28dnjhbgr"]
+
+[ext_resource type="Script" uid="uid://ct0unbupi47v2" path="res://Script/vela.gd" id="1_36c05"]
+[ext_resource type="Texture2D" uid="uid://bt1uhep5131gf" path="res://sprites/candleA_01.png" id="2_jk1q1"]
+[ext_resource type="Texture2D" uid="uid://gkn27fa4omra" path="res://sprites/candleA_04.png" id="3_48sf2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inol3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jk1q1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_48sf2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36c05"]
+size = Vector2(4, 12)
+
+[node name="vela" type="Node2D"]
+script = ExtResource("1_36c05")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_inol3")
+animation = &"1"
+frame_progress = 0.24453
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_36c05")
