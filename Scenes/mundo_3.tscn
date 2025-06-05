@@ -10998,4 +10998,13 @@ spawn_direction = "down"
 [node name="Spawn" parent="Puertas/Door_EL3" index="1"]
 position = Vector2(1, -72)
 
+[node name="Door_OL3" parent="Puertas" instance=ExtResource("44_8q0mh")]
+position = Vector2(432, -1895)
+Nombre_Nivel_destino = "Boss"
+Nombre_Door_destino = "EL4"
+
+[node name="Spawn" parent="Puertas/Door_OL3" index="1"]
+position = Vector2(0, 69)
+
 [editable path="Puertas/Door_EL3"]
+[editable path="Puertas/Door_OL3"]

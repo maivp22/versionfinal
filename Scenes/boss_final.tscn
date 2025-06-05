@@ -134,7 +134,7 @@
 [ext_resource type="Texture2D" uid="uid://lec808i2hv5f" path="res://Tileset/mundo3/rocky structure-women-statue_5.png" id="132_xu12k"]
 [ext_resource type="Texture2D" uid="uid://pn78gfnmx324" path="res://Tileset/mundo3/rocky structure_0.png" id="133_7fxnc"]
 [ext_resource type="PackedScene" path="res://Scenes/Enemy_L3_Boss.tscn" id="134_kx767"]
-[ext_resource type="PackedScene" uid="uid://cknl7u5gqptee" path="res://Scenes/playerL2.tscn" id="135_u05w2"]
+[ext_resource type="PackedScene" uid="uid://dvyag7rvlmij0" path="res://Scenes/Puerta.tscn" id="135_ubxlw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfcx0"]
 texture = ExtResource("1_w55ku")
@@ -69012,5 +69012,13 @@ position = Vector2(736, 719)
 [node name="Spawner4" type="Marker2D" parent="Spawners"]
 position = Vector2(559, 624)
 
-[node name="player" parent="." instance=ExtResource("135_u05w2")]
-position = Vector2(908, 1099)
+[node name="Door_EL4" parent="." instance=ExtResource("135_ubxlw")]
+position = Vector2(913, 1211)
+Nombre_Nivel_destino = "level3"
+Nombre_Door_destino = "OL3"
+spawn_direction = "down"
+
+[node name="Spawn" parent="Door_EL4" index="1"]
+position = Vector2(-1, -80)
+
+[editable path="Door_EL4"]

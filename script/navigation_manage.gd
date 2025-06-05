@@ -18,7 +18,8 @@ func go_to_level (level_tag, destination_door):
 			scene_to_load = scene_level2
 		"level3":
 			scene_to_load = scene_level3
-		"Boss"
+		"Boss":
+			scene_to_load = scene_level4
 			
 	if scene_to_load != null:
 		spawn_door_tag = destination_door
