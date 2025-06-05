@@ -3250,9 +3250,8 @@ position = Vector2(82, 0)
 
 [node name="Door_OL2" parent="TilemapLayers/Doors" instance=ExtResource("8_tc27s")]
 position = Vector2(1837, -678)
-Nombre_Nivel_destino = "lobby"
-Nombre_Door_destino = "OL0"
-spawn_direction = "left"
+Nombre_Nivel_destino = "level3"
+Nombre_Door_destino = "EL3"
 
 [node name="Spawn" parent="TilemapLayers/Doors/Door_OL2" index="1"]
 position = Vector2(0, 55)
