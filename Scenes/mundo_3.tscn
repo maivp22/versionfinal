@@ -42,8 +42,8 @@
 [ext_resource type="Texture2D" uid="uid://cpie2ea6niphr" path="res://Tileset/mundo3/rock-formations on lava-_4.png" id="44_x0tcn"]
 [ext_resource type="Texture2D" uid="uid://d21xxkh34wnog" path="res://Tileset/mundo3/rock-formations on lava-_3.png" id="45_vibye"]
 [ext_resource type="PackedScene" uid="uid://rkxee45vh2xi" path="res://Scenes/enemy_four.tscn" id="48_31vme"]
-[ext_resource type="PackedScene" path="res://Scenes/Enemy_L3_2.tscn" id="49_6rka2"]
-[ext_resource type="PackedScene" path="res://Scenes/Enemy_L3_3.tscn" id="50_6qsen"]
+[ext_resource type="PackedScene" uid="uid://chu7lbhuxpdt" path="res://Scenes/Enemy_L3_2.tscn" id="49_6rka2"]
+[ext_resource type="PackedScene" uid="uid://j78iqjuu0hel" path="res://Scenes/Enemy_L3_3.tscn" id="50_6qsen"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_skdcu"]
 texture = ExtResource("1_m3qg4")

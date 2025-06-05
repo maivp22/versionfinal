@@ -7,7 +7,10 @@ extends Node2D
 func _ready() -> void:
 	if NavigationManage.spawn_door_tag != null:
 		_on_level_spawn(NavigationManage.spawn_door_tag)		
-	add_child(player_instance)
+		var player_scene = preload("res://Scenes/Player.tscn")  # Carga la escena Player
+		var player_instance = player_scene.instantiate()        # Instancia la escena
+		add_child(player_instance)                              # La agregas como hijo del nodo actual
+
 	for x in range(1,46):
 		var enemy_instance = enemy_scene.instantiate()
 		var spawn_name = "TilemapLayers/SpawnZones/MiniEnemySpawn"+str(x)

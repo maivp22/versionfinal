@@ -3,7 +3,6 @@ class_name Enemy_patrol1 extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 @onready var health_bar = $ProgressBar
 @onready var player = null
-
 @export var patrol_points := [Vector2(966, 580), Vector2(966, 380)]
 @export var speed = 50
 @export var chase_speed = 100
@@ -103,4 +102,7 @@ func take_damage(amount):
 		die()
 
 func die():
+	var pocion = preload("res://Scenes/PocionVelocidad.tscn").instantiate()
+	pocion.global_position = self.global_position  # Usa la posición global real del enemigo
+	get_tree().current_scene.add_child(pocion)
 	queue_free()

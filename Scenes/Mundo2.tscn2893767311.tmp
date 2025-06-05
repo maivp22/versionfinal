@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dvyag7rvlmij0" path="res://Scenes/Puerta.tscn" id="8_tc27s"]
 [ext_resource type="PackedScene" uid="uid://char8j113fpy" path="res://Scenes/enemy_patrol.tscn" id="9_qyumv"]
 [ext_resource type="PackedScene" uid="uid://blfdj5udiu41m" path="res://Scenes/enemy_patrol2.tscn" id="10_ksco1"]
+[ext_resource type="Script" uid="uid://b38qc74mntmfb" path="res://script/enemy_patrol_2.gd" id="11_uarxa"]
 [ext_resource type="PackedScene" uid="uid://rkxee45vh2xi" path="res://Scenes/enemy_four.tscn" id="12_73m4k"]
 [ext_resource type="PackedScene" uid="uid://f62sgr8detp0" path="res://Scenes/enemy_four2.tscn" id="13_6h810"]
 [ext_resource type="PackedScene" uid="uid://cpnrty5rs6ohs" path="res://Scenes/enemy_four3.tscn" id="14_3npt3"]
@@ -26,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://kq5mn5783hxd" path="res://Scenes/velaPortal.tscn" id="25_itum1"]
 [ext_resource type="PackedScene" uid="uid://hlfnhhvktlen" path="res://Scenes/salud.tscn" id="26_c2jfc"]
 [ext_resource type="PackedScene" uid="uid://ctg80xgx8j2rn" path="res://Scenes/Potion.tscn" id="27_v83kb"]
-[ext_resource type="PackedScene" uid="uid://bxitl5140daxf" path="res://Scenes/Maletin.tscn" id="28_v83kb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oi3di"]
 texture = ExtResource("4_s2f6q")
@@ -3263,6 +3263,7 @@ max_life = 100
 [node name="EnemyPatrol2" parent="SpecialEnemys" instance=ExtResource("10_ksco1")]
 position = Vector2(1140, -210)
 scale = Vector2(1.04536, 0.806456)
+script = ExtResource("11_uarxa")
 patrol_points = [Vector2(1180, 103), Vector2(1613, 103)]
 speed = 75
 max_life = 100
@@ -3713,9 +3714,6 @@ position = Vector2(808, 58)
 
 [node name="Potion7" parent="." instance=ExtResource("27_v83kb")]
 position = Vector2(867, 682)
-
-[node name="Maletin" parent="." instance=ExtResource("28_v83kb")]
-position = Vector2(77, 8)
 
 [editable path="TilemapLayers/Doors/Door_EL2"]
 [editable path="TilemapLayers/Doors/Door_OL2"]

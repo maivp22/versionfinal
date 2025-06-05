@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://blfdj5udiu41m"]
 
-[ext_resource type="Script" uid="uid://1ih4v5rha1i7" path="res://Script/enemy_patrol.gd" id="1_e8ory"]
-[ext_resource type="Texture2D" uid="uid://cb2t2v8qva8ei" path="res://Boss_043.png" id="2_e8ory"]
+[ext_resource type="Script" uid="uid://b38qc74mntmfb" path="res://Script/enemy_patrol_2.gd" id="1_2hihg"]
+[ext_resource type="Texture2D" uid="uid://cb2t2v8qva8ei" path="res://sprites/Boss_043.png" id="2_e8ory"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pvju0"]
 atlas = ExtResource("2_e8ory")
@@ -211,7 +211,15 @@ size = Vector2(22, 38)
 
 [node name="EnemyPatrol" type="CharacterBody2D"]
 position = Vector2(2, -1)
-script = ExtResource("1_e8ory")
+script = ExtResource("1_2hihg")
+patrol_points = null
+speed = null
+chase_speed = null
+attack = null
+max_life = null
+detection_range = null
+attack_range = null
+attack_delay = null
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

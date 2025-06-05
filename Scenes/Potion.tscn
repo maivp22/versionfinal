@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctg80xgx8j2rn"]
+
+[ext_resource type="Script" uid="uid://bkiwuy40ea3hw" path="res://Script/Potion.gd" id="1_n5lv6"]
+[ext_resource type="Texture2D" uid="uid://dpu8hb028jdxm" path="res://data/#1 - Transparent Icons.png" id="2_5ig8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bag4e"]
+atlas = ExtResource("2_5ig8w")
+region = Rect2(0, 288, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nrw7"]
+atlas = ExtResource("2_5ig8w")
+region = Rect2(32, 288, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3ktd"]
+atlas = ExtResource("2_5ig8w")
+region = Rect2(64, 288, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5njy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bag4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nrw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3ktd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ajhy8"]
+radius = 13.0384
+
+[node name="Potion" type="Area2D"]
+script = ExtResource("1_n5lv6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x5njy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_ajhy8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -122.0
+offset_top = -46.0
+offset_right = 121.0
+offset_bottom = -23.0
+text = "poción de velocidad consumida"

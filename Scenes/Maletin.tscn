@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxitl5140daxf"]
+
+[ext_resource type="Script" uid="uid://n25ok5d6atv1" path="res://Script/maletin.gd" id="1_mw3ne"]
+[ext_resource type="Texture2D" uid="uid://dpu8hb028jdxm" path="res://data/#1 - Transparent Icons.png" id="2_6t6i7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bea0c"]
+atlas = ExtResource("2_6t6i7")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jayov"]
+atlas = ExtResource("2_6t6i7")
+region = Rect2(224, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n5ms"]
+atlas = ExtResource("2_6t6i7")
+region = Rect2(32, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnejt"]
+atlas = ExtResource("2_6t6i7")
+region = Rect2(320, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylohs"]
+atlas = ExtResource("2_6t6i7")
+region = Rect2(96, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7exa0"]
+atlas = ExtResource("2_6t6i7")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvnur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bea0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jayov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n5ms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnejt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylohs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7exa0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mf6ri"]
+radius = 16.0
+
+[node name="Maletin" type="Area2D"]
+script = ExtResource("1_mw3ne")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fvnur")
+frame_progress = 0.16593
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mf6ri")

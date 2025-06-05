@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bndn5g2q8g2th"]
+
+[ext_resource type="Script" uid="uid://sqkxeo1phqfq" path="res://Script/PocionFuerza.gd" id="1_fpgp7"]
+[ext_resource type="Texture2D" uid="uid://dpu8hb028jdxm" path="res://data/#1 - Transparent Icons.png" id="2_vpdxs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3lg0"]
+atlas = ExtResource("2_vpdxs")
+region = Rect2(64, 288, 32, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g2lv"]
+atlas = ExtResource("2_vpdxs")
+region = Rect2(320, 288, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y1tlm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3lg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g2lv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aswdp"]
+radius = 13.0
+
+[node name="PocionFuerza" type="Area2D"]
+script = ExtResource("1_fpgp7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y1tlm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aswdp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -70.0
+offset_top = -48.0
+offset_right = 70.0
+offset_bottom = -25.0
+text = "presiona la tecla E"
