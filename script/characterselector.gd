@@ -33,7 +33,7 @@ func _on_button_right_pressed() -> void:
 
 func _on_button_ok_pressed() -> void:
 	GameData.selected_skin_index = index_selection
-	get_tree().change_scene_to_file("res://Scenes/Mundo.tscn")
+	get_tree().change_scene_to_file("res://Scenes/estatua1.tscn")
 
 func _input(event):
 	if event.is_action_pressed("ui_pause"):
